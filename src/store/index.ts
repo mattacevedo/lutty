@@ -425,9 +425,10 @@ export const useAppStore = create<AppState>()(
         activeLutId: state.activeLutId,
         viewport: state.viewport,
         preview: {
-          ...state.preview,
-          images: [] as PreviewImage[],
-          activeImageId: null as string | null,
+          mode: state.preview.mode,
+          wipePosition: state.preview.wipePosition,
+          showFalseColor: state.preview.showFalseColor,
+          lutStrength: state.preview.lutStrength,
         },
         // Persist LUTs as serialized .cube text.
         // Skip LUTs larger than 33³ to stay within the ~5MB localStorage quota.
@@ -472,8 +473,6 @@ export const useAppStore = create<AppState>()(
           preview: {
             ...defaultPreview,
             ...((p as Partial<AppState>).preview ?? {}),
-            images: [] as PreviewImage[],
-            activeImageId: null as string | null,
           },
           luts: rehydratedLuts,
         };
