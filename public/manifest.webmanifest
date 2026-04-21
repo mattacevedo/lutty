@@ -1,0 +1,17 @@
+{
+  "name": "LUTTY — LUT Inspector",
+  "short_name": "LUTTY",
+  "description": "Professional browser-based LUT visualizer and editor. No plugins, no server.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0d0f",
+  "theme_color": "#6c63ff",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
