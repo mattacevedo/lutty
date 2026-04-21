@@ -2,8 +2,6 @@
 
 A professional LUT (Look-Up Table) visualizer and editor for the browser. Inspired by [Lattice](https://lut.robot-ranch.io). No plugins, no server — runs fully client-side.
 
-![LUTTY screenshot](public/icons.svg)
-
 ---
 
 ## Features
