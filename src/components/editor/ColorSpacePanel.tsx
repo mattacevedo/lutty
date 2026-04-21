@@ -7,7 +7,7 @@
 import React, { useState, useMemo } from 'react';
 import { useAppStore, selectActiveLut } from '../../store/index';
 import { HelpTip } from '../ui/HelpTip';
-import { convertLutColorSpace, applyMatrixToLut } from '../../core/colorspace/conversion';
+import { convertLutColorSpace } from '../../core/colorspace/conversion';
 import { ALL_PRIMARIES, getConversionMatrix, type ColorPrimaries } from '../../core/colorspace/primaries';
 import type { Lut3D } from '../../core/lut/types';
 

@@ -426,8 +426,8 @@ export const useAppStore = create<AppState>()(
         viewport: state.viewport,
         preview: {
           ...state.preview,
-          images: [],       // don't persist image data across sessions
-          activeImageId: null,
+          images: [] as PreviewImage[],
+          activeImageId: null as string | null,
         },
         // Persist LUTs as serialized .cube text.
         // Skip LUTs larger than 33³ to stay within the ~5MB localStorage quota.
@@ -472,8 +472,8 @@ export const useAppStore = create<AppState>()(
           preview: {
             ...defaultPreview,
             ...((p as Partial<AppState>).preview ?? {}),
-            images: [],         // never rehydrate image slots — pixels aren't persisted
-            activeImageId: null,
+            images: [] as PreviewImage[],
+            activeImageId: null as string | null,
           },
           luts: rehydratedLuts,
         };

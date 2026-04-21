@@ -30,7 +30,7 @@ import type { Lut3D } from '../../core/lut/types';
  * @param label         undo label
  */
 function useLiveSlider(
-  value: number,
+  _value: number,
   setValue: (v: number) => void,
   apply: (base: Float32Array, v: number) => Float32Array,
   label: string,
